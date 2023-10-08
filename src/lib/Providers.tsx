@@ -3,10 +3,13 @@
 import { store } from '@/redux/store';
 import React from 'react';
 import { Provider } from 'react-redux'
+import StyledComponentsRegistry from './AntdRegistry';
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
     return <Provider store={store}>
-        {children}
+        <StyledComponentsRegistry>
+            {children}
+        </StyledComponentsRegistry>
     </Provider>
 };
 
